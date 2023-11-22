@@ -36,10 +36,11 @@
   ],
   "profiles": {
     "defaults": {
+      "colorScheme": "Tango Dark",
       "opacity": 30,
       "scrollbarState": "hidden",
-      "useAcrylic": true,
-      "useAtlasEngine": false
+      "suppressApplicationTitle": true,
+      "useAcrylic": true
     },
     "list": [
       {
@@ -271,7 +272,6 @@
       "yellow": "#808000"
     }
   ],
-  "tabSwitcherMode": "inOrder",
   "themes": [],
   "useAcrylicInTabRow": true
 }
