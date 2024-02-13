@@ -18,44 +18,42 @@
           "type": "text"
         },
         {
-          "background": "#4270c0",
+          "background": "#7639ae",
           "foreground": "p:white",
           "properties": {
             "windows": "\ue62a",
-            "linux": "\uf17c",
-            "ubuntu": "\uf31b",
-            "macos": "\uf179"
+            "linux": "\uf17c"
           },
           "style": "plain",
           "template": " {{.Icon}}{{if .WSL}} WSL{{end}}\u2800",
           "type": "os"
         },
         {
-          "background": "p:white",
+          "background": "#e5cdf5",
           "foreground": "p:black",
           "style": "plain",
           "template": " \uf489 {{.Name}}\u2800",
           "type": "shell"
         },
         {
-          "background": "#bcc9e7",
-          "foreground": "p:black",
+          "background": "#7f74cc",
+          "foreground": "p:white",
           "style": "plain",
           "template": " \uf2c0 {{.UserName}}\u2800",
           "type": "session"
         },
         {
-          "background": "#5c6486",
+          "background": "#a0bd80",
           "foreground": "p:black",
           "properties": {
-            "branch_icon": " \ue0a0 "
+            "branch_icon": " \uf09b "
           },
           "style": "plain",
           "template": "{{.HEAD}}\u2800",
           "type": "git"
         },
         {
-          "background": "#21a677",
+          "background": "#92bd61",
           "foreground": "p:black",
           "style": "plain",
           "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ end }} ",
@@ -73,12 +71,12 @@
           "foreground": "p:white",
           "properties": {
             "folder_icon": "\uf07b",
-            "folder_separator_template": "<#cfd7ff> \u00bb </>",
+            "folder_separator_template": "<#7f74cc> \u00bb </>",
             "home_icon": "\ueb06",
             "style": "agnoster"
           },
           "style": "plain",
-          "template": "<p:white>\u2514</><#4270c0>[</> {{.Path}} <#4270c0>]</>",
+          "template": "<p:white>\u2514</><#e5cdf5>[</> {{.Path}} <#e5cdf5>]</>",
           "type": "path"
         }
       ]
@@ -90,8 +88,8 @@
       "segments": [
         {
           "background": "transparent",
-          "foreground": "#81a9ff",
-          "foreground_templates": ["{{if gt .Code 0}}#ff3030{{end}}"],
+          "foreground": "#e5cdf5",
+          "foreground_templates": ["{{if gt .Code 0}}#e5cdf5{{end}}"],
           "properties": {
             "always_enabled": true
           },
