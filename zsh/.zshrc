@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-zsh-autosuggestions
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,4 +104,21 @@ source $ZSH/oh-my-zsh.sh
 
 # Oh My Posh
 export PATH="/home/aefly/.posh/bin:$PATH"
-eval "$(oh-my-posh init zsh --config ~/.posh/theme/aefly.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.posh/themes/aefly.omp.json)"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# PNPM
+export PNPM_HOME="/home/aefly/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
