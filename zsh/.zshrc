@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -103,8 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Oh My Posh
-export PATH="/home/aefly/.posh/bin:$PATH"
-eval "$(oh-my-posh init zsh --config ~/.posh/themes/aefly.omp.json)"
+export PATH="$HOME/.oh-my-posh/bin:$PATH"
+eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh/themes/aefly.omp.json)"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -112,7 +112,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # PNPM
-export PNPM_HOME="/home/aefly/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -122,3 +122,6 @@ esac
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# Aliases
+alias cat='bat'
