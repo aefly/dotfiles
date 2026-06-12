@@ -1,0 +1,118 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+        "white": "#f7f7f7",
+        "black": "#111111"
+    },
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "p:white",
+                    "background": "transparent",
+                    "template": "\u250c"
+                },
+                {
+                    "type": "os",
+                    "style": "powerline",
+                    "foreground": "p:white",
+                    "background_templates": [
+                        "{{if eq .OS \"debian\"}}#d70a53{{end}}",
+                        "{{if eq .OS \"windows\"}}#08a1f7{{end}}"
+                    ],
+                    "options": {
+                        "debian": "\uf306",
+                        "windows": "\ue62a"
+                    },
+                    "template": " {{.Icon}} "
+                },
+                {
+                    "type": "shell",
+                    "style": "powerline",
+                    "background": "#4f79e8",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "template": " \uf489 {{.Name}} "
+                },
+                {
+                    "type": "session",
+                    "style": "powerline",
+                    "background": "#a25ce5",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "template": " \uf2c0 {{.UserName}} "
+                },
+                {
+                    "type": "git",
+                    "style": "powerline",
+                    "background": "#d7834f",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "options": {
+                        "branch_icon": ""
+                    },
+                    "template": " \ue725 {{.HEAD}} "
+                },
+                {
+                    "type": "node",
+                    "style": "powerline",
+                    "background": "#84ba64",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "template": " \ued0d {{.Full}} "
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "background": "transparent",
+                    "foreground": "p:white",
+                    "options": {
+                        "folder_separator_template": "<#4f79e8> \uea9c </>",
+                        "style": "agnoster_full",
+                        "home_icon": "~",
+                        "folder_separator_icon": " \uea9c "
+                    },
+                    "template": "<p:white>\u2514</> <#4f79e8>[</> <#e5c07b>\uf07b</> {{.Path}} <#4f79e8>]</>"
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "status",
+                    "style": "plain",
+                    "background": "transparent",
+                    "foreground": "#4f79e8",
+                    "foreground_templates": ["{{if gt .Code 0}}#ff3030{{end}}"],
+                    "options": {
+                        "always_enabled": true
+                    },
+                    "template": "\u276f"
+                }
+            ]
+        }
+    ],
+    "console_title_template": "{{if .Root}}[root] {{end}}{{.Shell}} in <{{.Folder}}>",
+    "final_space": true,
+    "upgrade": {
+        "source": "github",
+        "auto": true,
+        "notice": false
+    },
+    "version": 4
+}

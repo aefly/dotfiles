@@ -1,0 +1,1 @@
+oh-my-posh init pwsh --config ~/.config/.oh-my-posh/themes/aefly.omp.json | Invoke-Expression
