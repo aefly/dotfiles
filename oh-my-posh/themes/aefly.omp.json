@@ -65,6 +65,18 @@
                     "foreground": "p:white",
                     "powerline_symbol": "\ue0b0",
                     "template": " \ued0d {{.Full}} "
+                },
+                {
+                    "type": "python",
+                    "style": "powerline",
+                    "background": "#3572A5",
+                    "foreground": "p:white",
+                    "powerline_symbol": "\ue0b0",
+                    "template": " \ue235 {{.Full}}{{if .Venv}} (venv){{end}} ",
+                    "options": {
+                        "display_mode": "context",
+                        "fetch_virtual_env": true
+                    }
                 }
             ]
         },
