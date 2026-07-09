@@ -104,9 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# GPG
-export GPG_TTY=$(tty)
-
 # oh-my-posh
 export PATH="$PATH:$HOME/.oh-my-posh/bin"
 eval "$(oh-my-posh init zsh)"
@@ -129,3 +126,4 @@ export PATH=/home/aefly/.opencode/bin:$PATH
 # Aliases
 alias cat="batcat"
 alias oc="opencode"
+alias gpgu='gpg --batch --pinentry-mode loopback --passphrase-file ~/.gpg-passphrase --clearsign <<< "test" >/dev/null 2>&1'
