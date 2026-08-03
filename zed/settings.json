@@ -1,5 +1,3 @@
-/* Zed Configuration */
-
 {
     /* UI & Appearance */
     "ui_font_size": 16,
@@ -11,8 +9,8 @@
     "icon_theme": "Material Icon Theme",
     "theme": {
         "mode": "dark",
-        "light": "Vercel Light",
-        "dark": "Vercel Dark"
+        "light": "Orng Light",
+        "dark": "Orng Dark"
     },
     "theme_overrides": {
         "Vercel Dark": {
@@ -46,45 +44,35 @@
 
     /* AI */
     "agent": {
-        "inline_assistant_model": {
-            "provider": "opencode",
-            "model": "free/big-pickle",
-            "enable_thinking": false
-        },
-        "tool_permissions": {
-            "tools": {
-                "fetch": {
-                    "default": "allow"
-                },
-                "create_directory": {
-                    "default": "allow"
-                }
-            }
-        },
         "dock": "right",
         "notify_when_agent_waiting": "never",
         "enable_feedback": false,
         "sidebar_side": "left",
         "default_profile": "write",
         "default_model": {
-            "effort": "high",
             "provider": "opencode",
-            "model": "go/glm-v5.1",
-            "enable_thinking": true
+            "model": "free/big-pickle",
+            "enable_thinking": false
         },
         "favorite_models": [],
-        "model_parameters": []
+        "model_parameters": [],
+        "commit_message_instructions": "Use the Conventional Commits format: <type>(<scope>): <description>. Wrap code identifiers in backticks"
     },
+
     "edit_predictions": {
         "allow_data_collection": "no",
         "provider": "copilot"
     },
-    "cli_default_open_behavior": "existing_window",
+
+    "commit_message_model": {
+        "provider": "opencode",
+        "model": "free/big-pickle"
+    },
+
     "language_models": {
         "opencode": {
-            "show_go_models": true,
             "show_zen_models": false,
-            "show_free_models": true
+            "show_go_models": false
         }
     },
 
@@ -103,36 +91,5 @@
     "telemetry": {
         "diagnostics": false,
         "metrics": false
-    },
-
-    /* WSL */
-    "wsl_connections": [
-        {
-            "distro_name": "Debian",
-            "user": null,
-            "projects": [
-                {
-                    "paths": ["/home/aefly"]
-                },
-                {
-                    "paths": ["/home/aefly/dev/repo/aefly"]
-                },
-                {
-                    "paths": ["/home/aefly/dev/repo/asterisk"]
-                },
-                {
-                    "paths": ["/home/aefly/dev/repo/compress"]
-                },
-                {
-                    "paths": ["/home/aefly/dev/repo/desktop/./"]
-                },
-                {
-                    "paths": ["/home/aefly/dev/repo/dotfiles/./"]
-                },
-                {
-                    "paths": ["/home/aefly/dev/repo/unappx"]
-                }
-            ]
-        }
-    ]
+    }
 }
