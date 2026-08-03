@@ -120,9 +120,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 eval "$(pyenv virtualenv-init -)"
 
-# OpenCode
-export PATH=/home/aefly/.opencode/bin:$PATH
-
 # Aliases
 alias cat="batcat"
 alias oc="opencode"
