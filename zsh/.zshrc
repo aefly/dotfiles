@@ -122,5 +122,4 @@ eval "$(pyenv virtualenv-init -)"
 
 # Aliases
 alias cat="batcat"
-alias oc="opencode"
 alias gpgu='gpg --batch --pinentry-mode loopback --passphrase-file ~/.gpg-passphrase --clearsign <<< "test" >/dev/null 2>&1'
