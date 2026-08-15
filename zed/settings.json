@@ -56,19 +56,17 @@
         },
         "favorite_models": [],
         "model_parameters": [],
-        "commit_message_instructions": "Use the Conventional Commits format: <type>(<scope>): <description>. Wrap code identifiers in backticks"
+        "commit_message_instructions": "Use the Conventional Commits format: <type>(<scope>): <description>. Wrap code identifiers in backticks",
+        "commit_message_model": {
+            "provider": "opencode",
+            "model": "free/big-pickle",
+            "effort": "low"
+        }
     },
-
     "edit_predictions": {
         "allow_data_collection": "no",
         "provider": "copilot"
     },
-
-    "commit_message_model": {
-        "provider": "opencode",
-        "model": "free/big-pickle"
-    },
-
     "language_models": {
         "opencode": {
             "show_zen_models": false,
