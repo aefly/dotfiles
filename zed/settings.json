@@ -13,7 +13,7 @@
         "dark": "Orng Dark"
     },
     "theme_overrides": {
-        "Vercel Dark": {
+        "Orng Dark": {
             "syntax": {
                 "comment": { "font_style": "italic" },
                 "comment.doc": { "font_style": "italic" }
@@ -50,16 +50,15 @@
         "sidebar_side": "left",
         "default_profile": "write",
         "default_model": {
-            "provider": "opencode",
-            "model": "free/big-pickle",
-            "enable_thinking": false
+            "effort": "medium",
+            "provider": "google",
+            "model": "gemini-3.6-flash",
+            "enable_thinking": true
         },
-        "favorite_models": [],
-        "model_parameters": [],
         "commit_message_instructions": "Use the Conventional Commits format: <type>(<scope>): <description>. Wrap code identifiers in backticks",
         "commit_message_model": {
-            "provider": "opencode",
-            "model": "free/big-pickle",
+            "provider": "google",
+            "model": "gemini-3.6-flash",
             "effort": "low"
         }
     },
@@ -73,6 +72,25 @@
             "show_go_models": false
         }
     },
+
+    /* ACP */
+    "agent_servers": {
+        "claude-acp": {
+            "default_config_options": {
+                "fast": true
+            },
+            "type": "registry"
+        }
+    },
+
+    /* WSL */
+    "wsl_connections": [
+        {
+            "distro_name": "Debian",
+            "user": "aefly",
+            "projects": []
+        }
+    ],
 
     /* Terminal */
     "terminal": {
