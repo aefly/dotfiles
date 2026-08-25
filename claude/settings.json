@@ -11,11 +11,14 @@
             "Edit(.env)",
             "Edit(.env.*)",
             "Read(secrets/**)",
-            "Read(~/.ssh/**)",
+            "Read(~/.ssh/**)"
+        ],
+        "ask": [
+            "Bash(git commit *)",
+            "Bash(git push *)",
             "Bash(curl *)",
             "Bash(wget *)"
-        ],
-        "ask": ["Bash(git commit *)", "Bash(git push *)"]
+        ]
     },
     "model": "claude-sonnet-5",
     "fallbackModel": ["claude-sonnet-5"],
