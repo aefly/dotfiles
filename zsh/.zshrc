@@ -114,6 +114,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 # Aliases
 alias cat="batcat"
-alias gpgu='gpg --batch --pinentry-mode loopback --passphrase-file ~/.gpg-passphrase --clearsign <<< "test" >/dev/null 2>&1'
+alias gpgu='gpg --batch --pinentry-mode loopback --passphrase-file ~/.gnupg/.gpg-passphrase --clearsign <<< "test" >/dev/null 2>&1'
