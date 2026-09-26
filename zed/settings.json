@@ -49,28 +49,16 @@
         "enable_feedback": false,
         "sidebar_side": "left",
         "default_profile": "write",
-        "default_model": {
-            "effort": "medium",
-            "provider": "google",
-            "model": "gemini-3.6-flash",
-            "enable_thinking": true
-        },
         "commit_message_instructions": "Use the Conventional Commits format: <type>(<scope>): <description>. Wrap code identifiers in backticks",
         "commit_message_model": {
-            "provider": "google",
-            "model": "gemini-3.6-flash",
+            "provider": "openrouter",
+            "model": "poolside/laguna-s-2.1:free",
             "effort": "low"
         }
     },
     "edit_predictions": {
         "allow_data_collection": "no",
         "provider": "copilot"
-    },
-    "language_models": {
-        "opencode": {
-            "show_zen_models": false,
-            "show_go_models": false
-        }
     },
 
     /* ACP */
