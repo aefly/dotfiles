@@ -61,16 +61,6 @@
         "provider": "copilot"
     },
 
-    /* ACP */
-    "agent_servers": {
-        "claude-acp": {
-            "default_config_options": {
-                "fast": true
-            },
-            "type": "registry"
-        }
-    },
-
     /* WSL */
     "wsl_connections": [
         {
