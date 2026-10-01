@@ -44,10 +44,12 @@
 
     /* AI */
     "agent": {
+        "threads_sidebar": {
+            "position": "left"
+        },
         "dock": "right",
         "notify_when_agent_waiting": "never",
         "enable_feedback": false,
-        "sidebar_side": "left",
         "default_profile": "write",
         "commit_message_instructions": "Use the Conventional Commits format: <type>(<scope>): <description>. Wrap code identifiers in backticks",
         "commit_message_model": {
